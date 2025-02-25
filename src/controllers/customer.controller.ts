@@ -169,7 +169,7 @@ export const deductWalletBalance = async (
         const walletBalance = walletResult.rows[0].wallet_balance;
 
         if (walletBalance < amount) {
-            res.status(400).json({ error: "Insufficient wallet balance" });
+            res.status(400).json({ error: "Insufficient wallet balance" }); //bad request
             return;
         }
 
